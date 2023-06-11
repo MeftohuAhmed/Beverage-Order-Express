@@ -15,12 +15,17 @@ Beverage Order Express is a Java GUI application that allows customers to easily
 To run the Beverage Order Express application, ensure that you have Java installed on your system.
 
   1. Clone this repository to your local machine:
+  
       git clone https://github.com/MeftohuAhmed/Beverage-Order-Express.git
       
+      
   2. Compile the Java source files:
+      
       javac *.java
       
+      
   3. Run the application:
+      
       java BeverageShop
 
 **Usage**
