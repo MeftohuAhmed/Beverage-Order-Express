@@ -1,12 +1,23 @@
 import javax.swing.*;
 import java.util.ArrayList;
 
+/**
+ * The Receipt class represents a receipt for a beverage order.
+ * It contains information about the beverages, total cost, and applies discounts and coupons if applicable.
+ */
 public class Receipt {
     private ArrayList<Beverage> beverages;
     private double totalCost;
     private Discount discount;
     private Coupon coupon;
 
+    /**
+     * Constructs a new Receipt object with the specified list of beverages and total cost.
+     * Initializes the discount and coupon objects with default values.
+     *
+     * @param beverages  The list of beverages included in the order.
+     * @param totalCost  The total cost of the order.
+     */
     public Receipt(ArrayList<Beverage> beverages, double totalCost) {
         this.beverages = beverages;
         this.totalCost = totalCost;
@@ -15,6 +26,12 @@ public class Receipt {
         coupon = new Coupon("COUPON20", 20);
     }
 
+    /**
+     * Generates the text representation of the receipt.
+     * Includes information about the ordered beverages, total cost, applied discount, and applied coupon.
+     *
+     * @return The text representation of the receipt.
+     */
     public String getReceiptText() {
         StringBuilder receiptText = new StringBuilder();
         receiptText.append("----- RECEIPT -----\n\n");
