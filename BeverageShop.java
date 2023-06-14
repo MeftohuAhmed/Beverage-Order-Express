@@ -4,6 +4,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+/**
+ * The BeverageShop class represents a graphical user interface (GUI) application for a beverage shop.
+ * It allows users to select the size and type of beverage, enter the number of glasses, and place an order.
+ * The class extends the JFrame class to create the main application window and implements the ActionListener
+ * interface to handle button click events.
+ */
 public class BeverageShop extends JFrame implements ActionListener {
     private static final long serialVersionUID = 1L;
     private JLabel lblSize, lblBev, lblGlass, lblReport;
@@ -15,6 +21,11 @@ public class BeverageShop extends JFrame implements ActionListener {
     private int amountOf;
     private ArrayList<Beverage> listOfBvr = new ArrayList<Beverage>();
 
+    /**
+     * Constructs a new BeverageShop instance.
+     * Initializes the GUI components, sets up event listeners,
+     * and makes the main application window visible.
+     */
     public BeverageShop() {
         setLayout(null);
         setSize(600, 400);
@@ -26,10 +37,15 @@ public class BeverageShop extends JFrame implements ActionListener {
         setVisible(true);
     }
 
+    /**
+     * Initializes the GUI components and sets their properties.
+     */
     public void initializeComponents() {
         Font headingFont = new Font("Arial", Font.BOLD, 18);
         Font labelFont = new Font("Arial", Font.PLAIN, 14);
 
+        // Initialize and configure labels, combo boxes, radio buttons, text fields, and buttons
+        // Add them to the main application window using appropriate layouts and positions
         lblSize = new JLabel("Select Size:");
         lblSize.setFont(labelFont);
         lblSize.setSize(250, 30);
@@ -148,6 +164,12 @@ public class BeverageShop extends JFrame implements ActionListener {
         add(lblReport);
     }
 
+    /**
+     * Handles the button click events.
+     * Performs appropriate actions based on the event source.
+     *
+     * @param e The ActionEvent object representing the button click event.
+     */
     @Override
     public void actionPerformed(ActionEvent e) {
         String sizeOf = (String) size.getSelectedItem();
@@ -210,6 +232,12 @@ public class BeverageShop extends JFrame implements ActionListener {
         }
     }
 
+    /**
+     * The main entry point of the application.
+     * Creates an instance of BeverageShop to launch the GUI application.
+     *
+     * @param args The command-line arguments.
+     */
     public static void main(String[] args) {
         new BeverageShop();
     }
